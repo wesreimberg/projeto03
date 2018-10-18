@@ -13,7 +13,7 @@
                     <a class="nav-link" href="pessoa.jsp">Pessoas</a>
                 </li>
                 <li class="nav-item font-weight-bold">
-                    <a class="nav-link" href="empresa.jsp">Empresas</a>
+                    <a class="nav-link" href="listaEmpresa.jsp">Empresas</a>
                 </li>
                 <li class="nav-item font-weight-bold">
                     <a class="nav-link" href="veiculo.jsp">Veículos</a>
