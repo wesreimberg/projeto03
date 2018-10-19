@@ -1,11 +1,10 @@
-<%-- 
-    Document   : list
-    Created on : 06/10/2018, 09:06:21
-    Author     : a
---%>
 
-<%@page import="br.com.fatecpg.web.ContatoEmpresa"%>
-<%@page import="br.com.fatecpg.web.DbEmpresa"%>
+/**
+ *
+ * @author Thalisson
+ */
+<%@page import="br.com.fatecpg.web.Pessoa"%>
+<%@page import="br.com.fatecpg.web.DbPessoa"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,34 +15,31 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h1>Empresa</h1>
+        <h1>Cadastro Pessoa</h1>
         <h2>Excluir</h2>
         <%
             int i = Integer.parseInt(request.getParameter("i"));
-            ContatoEmpresa c = DbEmpresa.getContatoEmpresa().get(i);
+            Pessoa p = DbPessoa.getPessoas().get(i);
             if(request.getParameter("excluir") != null){
-                DbEmpresa.getContatoEmpresa().remove(i);
-                response.sendRedirect("listaEmpresa.jsp");
+                DbPessoa.getPessoas().remove(i);
+                response.sendRedirect("listaPessoa.jsp");
             }
         %>
         <form>
             Índice: <br/>
             <b><%=i%></b><br/>
             <input type="hidden" name="i" value="<%=i%>"/>
-            Nome: <br/>
-            <b><%=c.getNome()%></b>
+            Nome <br/>
+            <b><%=p.getNome()%></b>
             <br/>
-            Razão: <br/>
-            <b><%=c.getRazao()%></b>
+            CPF <br/>
+            <b><%=p.getCpf()%></b>
             <br/>
-            CNPJ: <br/>
-            <b><%=c.getCNPJ()%></b>
+            Email: <br/>
+            <b><%=p.getEmail()%></b>
             <br/>
-            Telefone: <br/>
-            <b><%=c.getTelefone()%></b>
-            <br/>
-            Web Site: <br/>
-            <b><%=c.getWebsite()%></b>
+           Telefone: <br/>
+            <b><%=p.getTelefone()%></b>
             <br/>
             <br/><input type="submit" name="excluir" value="Confirmar exclusão"/>
         </form>

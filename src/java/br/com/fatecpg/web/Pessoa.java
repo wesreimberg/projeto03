@@ -7,25 +7,36 @@ package br.com.fatecpg.web;
 
 /**
  *
- * @author a
+ * @author Thalisson
  */
-public class Contato {
+public class Pessoa {
+
     private String nome;
+    private String cpf;
     private String email;
     private String telefone;
 
-    public void setDados(String nome, String email, String telefone){
+    public void setDadosPessoa(String nome, String cpf, String email, String telefone) {
         this.setNome(nome);
+        this.setCpf(cpf);
         this.setEmail(email);
         this.setTelefone(telefone);
     }
-    
+
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {
@@ -43,5 +54,5 @@ public class Contato {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-    
+
 }

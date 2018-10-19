@@ -10,7 +10,7 @@
                     <a class="nav-link" href="home.jsp"> Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item font-weight-bold">
-                    <a class="nav-link" href="pessoa.jsp">Pessoas</a>
+                    <a class="nav-link" href="listaPessoa.jsp">Pessoas</a>
                 </li>
                 <li class="nav-item font-weight-bold">
                     <a class="nav-link" href="listaEmpresa.jsp">Empresas</a>
