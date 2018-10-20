@@ -18,8 +18,9 @@
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <h1>Cadastro</h1>
         <h2>Empresas</h2>
-        <a href="empresa.jsp"><button>Cadastrar</button></a><hr/>
-        <table border="1">
+        <a href="empresa.jsp"><button class="btn btn-lg btn-dark" texttype="submit" name="cadastrar">Cadastrar</button></a><hr/>
+        <table class="table">
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
@@ -29,8 +30,10 @@
                 <th>Web Site</th>
                 <th>Comandos</th>
             </tr>
+            </thead>
             <%for(ContatoEmpresa c: DbEmpresa.getContatoEmpresa()){%>
             <%int i = DbEmpresa.getContatoEmpresa().indexOf(c);%>
+              <tbody>
             <tr>
                 <td><%=i%></td>
                 <td><%=c.getNome()%></td>
@@ -39,11 +42,12 @@
                 <td><%=c.getTelefone()%></td>
                 <td><%=c.getWebsite()%></td>
                 <td>
-                    <a href="alterarEmpresa.jsp?i=<%=i%>"><button>Alterar</button></a>
-                    <a href="excluirEmpresa.jsp?i=<%=i%>"><button>Excluir</button></a>
+                    <a href="alterarEmpresa.jsp?i=<%=i%>"><button class="btn btn-lg btn-dark" texttype="submit" name="alterar">Alterar</button></a>
+                    <a href="excluirEmpresa.jsp?i=<%=i%>"><button class="btn btn-lg btn-dark" texttype="submit" name="excluir">Excluir</button></a>
                 </td>
             </tr>
             <%}%>
+              </tbody>
         </table>
         <%@include file="WEB-INF/jspf/rodape.jspf" %>
     </body>

@@ -52,6 +52,7 @@
             <input type="text" name="website" value="<%=c.getWebsite()%>"/>
             <br/>
             <br/><input type="submit" name="alterar" value="Alterar"/>
+            
         </form>
             <%@include file="WEB-INF/jspf/rodape.jspf" %>
     </body>
