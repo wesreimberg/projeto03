@@ -12,12 +12,12 @@
     <head>
         <%@include file="WEB-INF/jspf/cabecalho.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contatos Empresa</title>
+        <title>Empresa</title>
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h1>Empresas</h1>
-        <h2>Empresas Cadastradas</h2>
+        <h1>Cadastro</h1>
+        <h2>Empresas</h2>
         <a href="empresa.jsp"><button>Cadastrar</button></a><hr/>
         <table border="1">
             <tr>

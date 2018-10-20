@@ -11,7 +11,7 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h1>Veiculos</h1>
+        <h1>Cadastro</h1>
         <h2>Veiculos</h2>
         <a href="cadastraVeiculo.jsp"><button>Cadastrar</button></a><hr/>
         <table border="1">
